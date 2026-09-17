@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://lvv67p1hna2s"]
+
+[ext_resource type="Texture2D" uid="uid://c1b2b4a3lm140" path="res://models/structures/gas_station/textures/Marble.jpg" id="1_7bjjg"]
+
+[resource]
+resource_name = "Marble"
+cull_mode = 2
+albedo_texture = ExtResource("1_7bjjg")
+metadata/_gltf_primary_texture_coord = 0

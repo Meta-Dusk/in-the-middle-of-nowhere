@@ -1,0 +1,114 @@
+[gd_scene format=4 uid="uid://svvyihdp727g"]
+
+[ext_resource type="Script" uid="uid://bmp7igbiubskh" path="res://scenes/prefabs/anim_tweaker.gd" id="1_qqb3f"]
+[ext_resource type="Material" uid="uid://7gdpq7qi4uny" path="res://models/structures/gas_station/materials/Bathrooms.tres" id="1_tdc1a"]
+[ext_resource type="Script" uid="uid://csyre4nyapm4" path="res://scripts/interactables/openable.gd" id="2_qklny"]
+
+[sub_resource type="Animation" id="Animation_qqb3f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_emxmo"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.3962634, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lyorm"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.3962634, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_btect"]
+_data = {
+&"RESET": SubResource("Animation_qqb3f"),
+&"close": SubResource("Animation_emxmo"),
+&"open": SubResource("Animation_lyorm")
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ilkou"]
+_surfaces = [{
+"aabb": AABB(-0.016141526, -0.98172563, -0.95440125, 0.034627527, 1.9634513, 0.964092),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEAAgAFAAMAAgABAAUAAAADAAYABAAAAAYABgADAAUAAQAEAAcABAAGAAcAAQAHAAUABgAFAAcA"),
+"name": "Bathrooms",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v8AAP//AAD/////AAAAAP7//////wAAAAD/////AAD//wAAAAAAAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qklny"]
+resource_name = "gas_station_Toilet_cubicles_Door_004"
+_surfaces = [{
+"aabb": AABB(-0.016141526, -0.98172563, -0.95440125, 0.034627527, 1.9634513, 0.964092),
+"attribute_data": PackedByteArray("O0drAc0A4Yc7R+GHzQBrAdhHawFrAeGHawFrAdhH4Ydz7PguFOpldRTq+C5z7GV1eNBrAdfS4YfX0msBeNDhh63V4YcN2GsBDdjhh63VawE952V13uT4Lt7kZXU95/gu"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": ExtResource("1_tdc1a"),
+"name": "Bathrooms",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/v8AAP///z//////AAD/P/7///////8///8AAAAA/z8AAAAA/////wAA//8AAP//AAAAAAAA//8AAP////////7///////+/AAD//wAA/78AAP//////v/////8AAP+//v8AAP//AAAAAP////8AAAAAAAD//wAA/v//////AAD/////AAD//wAAAAAAAP//AAD//wAA/////wAAAAD/////AAAAAP8/AAAAAP///z8AAAAAAAD/P/7/AAD///8//3////9/////f////3////+//3//v/9//7//f/+//38AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9//3//f/9//3//f/9//3////9//v//f////3/+//9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ilkou")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qqb3f"]
+points = PackedVector3Array(-0.031682543, -0.9972826, -0.9699826, 0.03064762, 0.9972826, 0.0273, -0.031682543, 0.9972826, 0.0273, 0.03064762, -0.9972826, 0.0273, 0.03064762, 0.9972826, -0.9699826, -0.031682543, 0.9972826, -0.9699826, -0.031682543, -0.9972826, 0.0273, 0.03064762, -0.9972826, -0.9699826)
+
+[node name="CrStallDoor" type="Node3D" unique_id=100438576]
+script = ExtResource("1_qqb3f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1464310616]
+libraries/ = SubResource("AnimationLibrary_btect")
+
+[node name="Hinge" type="Node3D" parent="." unique_id=1079362856]
+
+[node name="DoorMesh" type="MeshInstance3D" parent="Hinge" unique_id=250544939]
+transform = Transform3D(-1, 0, -3.8941437e-07, 0, 1, 0, 3.8941437e-07, 0, -1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_qklny")
+
+[node name="DoorBody" type="StaticBody3D" parent="Hinge/DoorMesh" unique_id=1352918344 node_paths=PackedStringArray("anim_player", "anim_tweaker")]
+script = ExtResource("2_qklny")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_tweaker = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/DoorMesh/DoorBody" unique_id=1328336947]
+shape = SubResource("ConvexPolygonShape3D_qqb3f")

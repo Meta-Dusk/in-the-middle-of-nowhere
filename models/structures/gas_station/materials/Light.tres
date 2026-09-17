@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://7uqt26qi0jyh"]
+
+[ext_resource type="Texture2D" uid="uid://ckfybhdjkftta" path="res://models/structures/gas_station/textures/Light.jpg" id="1_50f5l"]
+
+[resource]
+resource_name = "Light"
+cull_mode = 2
+albedo_texture = ExtResource("1_50f5l")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("1_50f5l")
+metadata/_gltf_primary_texture_coord = 0

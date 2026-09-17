@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2cxlsn1uwbvl"]
+
+[ext_resource type="Texture2D" uid="uid://cnmthqvo2n6gd" path="res://models/structures/gas_station/textures/Coffee_machine.png" id="1_nhvho"]
+
+[resource]
+resource_name = "Coffee_machine"
+cull_mode = 2
+albedo_texture = ExtResource("1_nhvho")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7mnd0ixb3ebp"]
+
+[ext_resource type="Texture2D" uid="uid://dk0ufh2hhd140" path="res://models/structures/gas_station/textures/Shelving.png" id="1_8cbbj"]
+
+[resource]
+resource_name = "Shelving"
+cull_mode = 2
+albedo_texture = ExtResource("1_8cbbj")
+metadata/_gltf_primary_texture_coord = 0

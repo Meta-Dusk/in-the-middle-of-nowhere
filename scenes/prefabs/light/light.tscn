@@ -1,0 +1,52 @@
+[gd_scene format=4 uid="uid://3je0yj3o5wxk"]
+
+[ext_resource type="Material" uid="uid://7uqt26qi0jyh" path="res://models/structures/gas_station/materials/Light.tres" id="1_doecq"]
+[ext_resource type="Script" uid="uid://dwksnq6gtoaoh" path="res://scripts/interactables/light.gd" id="1_xjbbg"]
+[ext_resource type="Material" uid="uid://b6e06kg2dx0wc" path="res://scenes/prefabs/light/mat_light_off.tres" id="2_un52c"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mq0mt"]
+_surfaces = [{
+"aabb": AABB(-1.5655417, -0.015364492, -0.44061652, 3.1310837, 0.030729031, 0.88123304),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAABAAIAAwACAAEAAAAEAAEAAAAEAAEABAADAAEABAADAAEABAAAAAUABQAAAAIABQAAAAIABAAGAAMABAAGAAMABAAFAAYABgAHAAMAAwAHAAIABgAHAAMABQACAAcABQACAAcABgAFAAcABgAFAAcA"),
+"name": "Light",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAA/////wAAAAAAAAAAAAAAAP//AAD//wAA//8AAAAAAAD///////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xjbbg"]
+resource_name = "gas_station_Lamp_024"
+_surfaces = [{
+"aabb": AABB(-1.5655417, -0.015364492, -0.44061652, 3.1310837, 0.030729031, 0.88123304),
+"attribute_data": PackedByteArray("DP8cpkn/ub5J/xymDP+5vgz/74ZJ/2TeSf/vhgz/ZN4M/7m+Sf8cpkn/ub4M/xymDP9k3kn/74ZJ/2TeDP/vhmeA/3//////////f2eA//////9/Z4D//2eA/3//////DP8cpkn/ub5J/xymDP+5vgz/74ZJ/2TeSf/vhgz/ZN4M/7m+Sf8cpkn/ub4M/xymDP9k3kn/74ZJ/2TeDP/vhg=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
+"material": ExtResource("1_doecq"),
+"name": "Light",
+"primitive": 3,
+"uv_scale": Vector4(2.0049438, 2, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAAAAP//qioAAP//AACqKgAA/////6oqAAAAAAAAqioAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/P///AAD///8///8AAAAA/z8AAAAA////P/////8AAP+/AAD//////78AAP//AAD/v/////////+/AAAAAP//qioAAP//AACqKgAA/////6oqAAAAAAAAqioAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///79U1VTVVNVU1VTVVNVU1VTV/7//v/+//7//v/+//7//v6oqqiqqKqoqqiqqKqoqqir/////////////////////AAD/fwAA/38AAP9/AAD/f////3////9/////f////39U1VTVVNVU1VTVVNVU1VTV/7//v/+//7//v/+//7//v6oqqiqqKqoqqiqqKqoqqir/////////////////////")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mq0mt")
+
+[node name="Light" type="Node3D" unique_id=240661929 node_paths=PackedStringArray("light")]
+script = ExtResource("1_xjbbg")
+is_on = false
+off_material = ExtResource("2_un52c")
+light = NodePath("LampMesh/SpotLight3D")
+
+[node name="LampMesh" type="MeshInstance3D" parent="." unique_id=1670239631]
+transform = Transform3D(1.7881393e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.7881393e-07, 0, 0, 0)
+mesh = SubResource("ArrayMesh_xjbbg")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="LampMesh" unique_id=915577705]
+transform = Transform3D(1, -1.7881396e-07, -1.7881395e-07, 1.7881395e-07, -4.371139e-08, 1, -1.7881396e-07, -1, -4.3711356e-08, 0, 0, 0)
+spot_range = 8.0
+spot_angle = 50.0

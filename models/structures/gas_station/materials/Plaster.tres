@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://pq1idsgfao2x"]
+
+[ext_resource type="Texture2D" uid="uid://blfc2bncgbmk1" path="res://models/structures/gas_station/textures/Plaster.jpg" id="1_0xng3"]
+
+[resource]
+resource_name = "Plaster"
+cull_mode = 2
+albedo_texture = ExtResource("1_0xng3")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4fi2x3xqi21x"]
+
+[ext_resource type="Texture2D" uid="uid://cjtrp7prjqywd" path="res://models/structures/gas_station/textures/Sweets_others.jpg" id="1_6vhr5"]
+
+[resource]
+resource_name = "Sweets_others"
+cull_mode = 2
+albedo_texture = ExtResource("1_6vhr5")
+metadata/_gltf_primary_texture_coord = 0

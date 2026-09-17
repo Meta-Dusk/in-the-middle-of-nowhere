@@ -1,0 +1,363 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dka0l6x5ocuxo"
+path="res://.godot/imported/gas_station.gltf-8b2845bda9e474c3ea58f5dcc9d44859.scn"
+
+[deps]
+
+source_file="res://models/structures/gas_station/gas_station.gltf"
+dest_files=["res://.godot/imported/gas_station.gltf-8b2845bda9e474c3ea58f5dcc9d44859.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"6twelve.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/6twelve.001.tres",
+"use_external/path": "uid://cmwrc13oaivyg"
+},
+"6twelve_Sign": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/6twelve_Sign.tres",
+"use_external/path": "uid://4nfauy6psc30"
+},
+"Asphalt": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Asphalt.tres",
+"use_external/path": "uid://cddfq6fmtd50u"
+},
+"AsphaltDamaged": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/AsphaltDamaged.tres",
+"use_external/path": "uid://dsmuqoeqvrmrl"
+},
+"Background": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Background.tres",
+"use_external/path": "uid://b7wayo6gyjipi"
+},
+"Background_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Background_01.tres",
+"use_external/path": "uid://bcd1pub5t5vev"
+},
+"Bathrooms": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Bathrooms.tres",
+"use_external/path": "uid://7gdpq7qi4uny"
+},
+"Board": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Board.tres",
+"use_external/path": "uid://80r2fnrdkg8q"
+},
+"Brick": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Brick.tres",
+"use_external/path": "uid://efrklkg2hdtx"
+},
+"BrickSmallPainted": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/BrickSmallPainted.tres",
+"use_external/path": "uid://6or6u7eh5ux5"
+},
+"Bush": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Bush.tres",
+"use_external/path": "uid://bpfo04pm51miq"
+},
+"Camera": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Camera.tres",
+"use_external/path": "uid://dkav6f5o3lyfh"
+},
+"Carpet": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Carpet.tres",
+"use_external/path": "uid://cd77lq5dw1dhu"
+},
+"Carpet_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Carpet_01.tres",
+"use_external/path": "uid://b2ox1vsdk37p0"
+},
+"Checker": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Checker.tres",
+"use_external/path": "uid://cavt74q35anxw"
+},
+"Coffee_machine": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Coffee_machine.tres",
+"use_external/path": "uid://d2cxlsn1uwbvl"
+},
+"Concrete": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Concrete.tres",
+"use_external/path": "uid://c4k747m7y5uj4"
+},
+"Concrete_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Concrete_01.tres",
+"use_external/path": "uid://duk061gvh3u0u"
+},
+"Deposit": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Deposit.tres",
+"use_external/path": "uid://bmsexdl0nroag"
+},
+"Door": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Door.tres",
+"use_external/path": "uid://cu2mk0dsy6ptk"
+},
+"Door_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Door_01.tres",
+"use_external/path": "uid://3p35flgxaxy1"
+},
+"Emissor_Verde": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Emissor_Verde.tres",
+"use_external/path": "uid://b0k54t2aqiwkc"
+},
+"Foods_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Foods_01.tres",
+"use_external/path": "uid://4y4s375nghuj"
+},
+"Foods_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Foods_02.tres",
+"use_external/path": "uid://dg51vsve4irdl"
+},
+"Foods_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Foods_03.tres",
+"use_external/path": "uid://cbgt7jclj5706"
+},
+"Foods_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Foods_04.tres",
+"use_external/path": "uid://bh7n2g1h6468a"
+},
+"Foods_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Foods_07.tres",
+"use_external/path": "uid://ic465iwexfvd"
+},
+"Fridge": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Fridge.tres",
+"use_external/path": "uid://0wq6p3f0i8ag"
+},
+"Fuel_pump": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Fuel_pump.tres",
+"use_external/path": "uid://bbumcyo28etln"
+},
+"Fusible": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Fusible.tres",
+"use_external/path": "uid://cuv1gfgvoxsl7"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Glass.tres",
+"use_external/path": "uid://b3lkkwn2i0tm0"
+},
+"Ground": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Ground.tres",
+"use_external/path": "uid://brwktqhn2dufi"
+},
+"ICE": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/ICE.tres",
+"use_external/path": "uid://b5iga37xlc465"
+},
+"Light": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Light.tres",
+"use_external/path": "uid://7uqt26qi0jyh"
+},
+"Management": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Management.tres",
+"use_external/path": "uid://mqraan6c3ial"
+},
+"Marble": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Marble.tres",
+"use_external/path": "uid://lvv67p1hna2s"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Metal.tres",
+"use_external/path": "uid://kgtl5vh2ud6k"
+},
+"MetalPlates": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/MetalPlates.tres",
+"use_external/path": "uid://b4sobx26n5o1a"
+},
+"Metal_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Metal_01.tres",
+"use_external/path": "uid://cvm563i6anh8u"
+},
+"Metal_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Metal_02.tres",
+"use_external/path": "uid://batimxchw4cc0"
+},
+"Metal_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Metal_03.tres",
+"use_external/path": "uid://bofg7640gmpa6"
+},
+"Office_Ceiling": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Office_Ceiling.tres",
+"use_external/path": "uid://b41tn7egptqsy"
+},
+"Others": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Others.tres",
+"use_external/path": "uid://6w78gt140aqt"
+},
+"Pack_lighters": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Pack_lighters.tres",
+"use_external/path": "uid://ccighwtgnmo81"
+},
+"Plaster": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Plaster.tres",
+"use_external/path": "uid://pq1idsgfao2x"
+},
+"Refrigerador": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Refrigerador.tres",
+"use_external/path": "uid://5fdnaiaask0q"
+},
+"Refrigerador_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Refrigerador_01.tres",
+"use_external/path": "uid://bdfw0jjyg34uq"
+},
+"Refrigerador_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Refrigerador_02.tres",
+"use_external/path": "uid://bb356kjmksnq2"
+},
+"Road": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Road.tres",
+"use_external/path": "uid://b4cd8euyb7m7w"
+},
+"Roof_tiles": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Roof_tiles.tres",
+"use_external/path": "uid://xvmlui7j85j5"
+},
+"Sanitary": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Sanitary.tres",
+"use_external/path": "uid://dio1aisdi2vet"
+},
+"Shelving": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Shelving.tres",
+"use_external/path": "uid://b7mnd0ixb3ebp"
+},
+"Sign": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Sign.tres",
+"use_external/path": "uid://llu23c1fwg4q"
+},
+"Sweets_others": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Sweets_others.tres",
+"use_external/path": "uid://4fi2x3xqi21x"
+},
+"Tiles": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Tiles.tres",
+"use_external/path": "uid://cmlhi4vmn6e8e"
+},
+"TilesPlain": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/TilesPlain.tres",
+"use_external/path": "uid://dn8mc4meeav4q"
+},
+"Tiles_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Tiles_01.tres",
+"use_external/path": "uid://s7hl6lxdoto0"
+},
+"Toilets_Sing": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Toilets_Sing.tres",
+"use_external/path": "uid://cuclqpp71njxo"
+},
+"Trash": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Trash.tres",
+"use_external/path": "uid://baosq6qrag70x"
+},
+"Tree": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Tree.tres",
+"use_external/path": "uid://b6ko3av2hhpnl"
+},
+"Tree_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/Tree_01.tres",
+"use_external/path": "uid://b5u5e3h05drqp"
+},
+"ice_slush_machine": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/ice_slush_machine.tres",
+"use_external/path": "uid://doo321die43d"
+},
+"spotlight": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://models/structures/gas_station/materials/spotlight.tres",
+"use_external/path": "uid://cx13v6sh34p50"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

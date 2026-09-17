@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cavt74q35anxw"]
+
+[ext_resource type="Texture2D" uid="uid://cf1n174povevo" path="res://models/structures/gas_station/textures/Checker.png" id="1_tgscp"]
+
+[resource]
+resource_name = "Checker"
+cull_mode = 2
+albedo_texture = ExtResource("1_tgscp")
+metadata/_gltf_primary_texture_coord = 0

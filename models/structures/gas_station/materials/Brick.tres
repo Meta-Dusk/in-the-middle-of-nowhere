@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://efrklkg2hdtx"]
+
+[ext_resource type="Texture2D" uid="uid://s8qqe08t15wg" path="res://models/structures/gas_station/textures/Brick.jpg" id="1_6n8pv"]
+
+[resource]
+resource_name = "Brick"
+cull_mode = 2
+albedo_texture = ExtResource("1_6n8pv")
+metadata/_gltf_primary_texture_coord = 0

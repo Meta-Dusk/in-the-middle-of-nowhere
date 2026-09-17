@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bh7n2g1h6468a"]
+
+[ext_resource type="Texture2D" uid="uid://b3884c655hbe0" path="res://models/structures/gas_station/textures/Foods_04.jpg" id="1_675jg"]
+
+[resource]
+resource_name = "Foods_04"
+cull_mode = 2
+albedo_texture = ExtResource("1_675jg")
+metadata/_gltf_primary_texture_coord = 0

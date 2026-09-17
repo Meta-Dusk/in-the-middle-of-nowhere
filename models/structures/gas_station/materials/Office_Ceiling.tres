@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b41tn7egptqsy"]
+
+[ext_resource type="Texture2D" uid="uid://b34po5blb5rd7" path="res://models/structures/gas_station/textures/Office_Ceiling.jpg" id="1_5pl1w"]
+
+[resource]
+resource_name = "Office_Ceiling"
+cull_mode = 2
+albedo_texture = ExtResource("1_5pl1w")
+metadata/_gltf_primary_texture_coord = 0

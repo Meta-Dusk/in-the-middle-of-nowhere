@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bheulca6ptqb7"]
+
+[ext_resource type="Script" uid="uid://3mf8xl7h86hh" path="res://scenes/prefabs/light_switch/light_switch.gd" id="1_fcs1q"]
+[ext_resource type="Material" uid="uid://dolr7f0ctf5yv" path="res://scenes/prefabs/light_switch/mat_light_switch.tres" id="1_u2emh"]
+[ext_resource type="Script" uid="uid://dd3vsgi0g4nhc" path="res://scripts/interactables/simple_interactable.gd" id="2_fynll"]
+[ext_resource type="Texture2D" uid="uid://bdw0tnltjbbtr" path="res://scenes/prefabs/light_switch/Light_switch.png" id="2_xb0r5"]
+
+[sub_resource type="Animation" id="Animation_u2emh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SwitchMesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.21261911, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fynll"]
+resource_name = "close"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SwitchMesh:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.21293017, 0, 0), Vector3(0.21293017, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jgs1u"]
+resource_name = "open"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SwitchMesh:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.21261911, 0, 0), Vector3(-0.21293017, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fynll"]
+_data = {
+&"RESET": SubResource("Animation_u2emh"),
+&"close": SubResource("Animation_fynll"),
+&"open": SubResource("Animation_jgs1u")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_567ap"]
+size = Vector3(0.3203125, 0.4724121, 0.015380859)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_567ap"]
+size = Vector3(0.3203125, 0.46704102, 0.068115234)
+
+[sub_resource type="BoxMesh" id="BoxMesh_81n17"]
+size = Vector3(0.12878418, 0.2423706, 0.05935669)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fynll"]
+albedo_texture = ExtResource("2_xb0r5")
+uv1_scale = Vector3(1.155, 0.945, 1.155)
+uv1_offset = Vector3(0.52, 0.245, 0)
+
+[node name="LightSwitch" type="Node3D" unique_id=472519051]
+script = ExtResource("1_fcs1q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=703334235]
+libraries/ = SubResource("AnimationLibrary_fynll")
+
+[node name="LightMesh" type="MeshInstance3D" parent="." unique_id=1187909684]
+mesh = SubResource("BoxMesh_567ap")
+surface_material_override/0 = ExtResource("1_u2emh")
+
+[node name="LightSwitchBody" type="StaticBody3D" parent="LightMesh" unique_id=64693995 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("2_fynll")
+anim_player = NodePath("../../AnimationPlayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LightMesh/LightSwitchBody" unique_id=865102112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.026245117)
+shape = SubResource("BoxShape3D_567ap")
+
+[node name="SwitchMesh" type="MeshInstance3D" parent="." unique_id=463703278]
+transform = Transform3D(1, 0, 0, 0, 0.9774816, -0.21102075, 0, 0.21102075, 0.9774816, 0.0020141602, -0.014358316, -0.004203876)
+mesh = SubResource("BoxMesh_81n17")
+surface_material_override/0 = SubResource("StandardMaterial3D_fynll")
+
+[connection signal="interacted" from="LightMesh/LightSwitchBody" to="." method="_on_light_switch_body_interacted"]

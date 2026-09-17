@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0k54t2aqiwkc"]
+
+[resource]
+resource_name = "Emissor_Verde"
+cull_mode = 2
+albedo_color = Color(0.03927586, 0.9063318, 0, 1)
+emission_enabled = true
+emission = Color(0, 1, 0.0042738947, 1)

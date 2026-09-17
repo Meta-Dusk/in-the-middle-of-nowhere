@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5iga37xlc465"]
+
+[ext_resource type="Texture2D" uid="uid://dr8x78k865fe3" path="res://models/structures/gas_station/textures/ICE.png" id="1_0v1po"]
+
+[resource]
+resource_name = "ICE"
+cull_mode = 2
+albedo_texture = ExtResource("1_0v1po")
+metadata/_gltf_primary_texture_coord = 0

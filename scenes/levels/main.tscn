@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cwalykmmc815q"]
+
+[ext_resource type="PackedScene" uid="uid://dlwgj5vr6nxhf" path="res://scenes/structures/gas_station.scn" id="1_72ix8"]
+[ext_resource type="PackedScene" uid="uid://l7ydit5ambsn" path="res://scenes/characters/player/player.tscn" id="2_2vj2h"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72ix8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_2vj2h"]
+sky_material = SubResource("ProceduralSkyMaterial_72ix8")
+
+[sub_resource type="Environment" id="Environment_y0acb"]
+background_mode = 1
+sky = SubResource("Sky_2vj2h")
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.5649617, 0.5649616, 0.5649616, 1)
+
+[node name="Main" type="Node3D" unique_id=1897547730]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=988812085]
+environment = SubResource("Environment_y0acb")
+
+[node name="GasStation" parent="." unique_id=1242851089 instance=ExtResource("1_72ix8")]
+
+[node name="Player" parent="." unique_id=838864236 instance=ExtResource("2_2vj2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.104132, 1, 0.8075185)

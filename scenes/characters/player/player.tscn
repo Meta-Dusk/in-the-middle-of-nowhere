@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://l7ydit5ambsn"]
+
+[ext_resource type="Script" uid="uid://dktpk0cyq8747" path="res://scenes/characters/player/player.gd" id="1_7uws0"]
+[ext_resource type="PackedScene" uid="uid://clisbpi6hbutq" path="res://scenes/characters/character_04.tscn" id="2_hss88"]
+[ext_resource type="Script" uid="uid://c1vo744sxths8" path="res://scenes/characters/player/fp_cam.gd" id="2_t61fv"]
+[ext_resource type="Script" uid="uid://dxt0rotdn0nio" path="res://scenes/characters/player/player_interact.gd" id="3_686vu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_81n17"]
+radius = 0.35
+
+[node name="Player" type="CharacterBody3D" unique_id=838864236 node_paths=PackedStringArray("wall_ray", "r_hand_target", "l_hand_target", "r_arm_ik", "l_arm_ik", "r_hand_ik", "l_hand_ik")]
+floor_max_angle = 0.9599311
+script = ExtResource("1_7uws0")
+wall_ray = NodePath("Body/RayCast3D")
+r_hand_target = NodePath("Body/RightHandTarget")
+l_hand_target = NodePath("Body/LeftHandTarget")
+r_arm_ik = NodePath("Character_04/Skeleton3D/RightArmIter")
+l_arm_ik = NodePath("Character_04/Skeleton3D/LeftArmIter")
+r_hand_ik = NodePath("Character_04/Skeleton3D/RightHand")
+l_hand_ik = NodePath("Character_04/Skeleton3D/LeftHand")
+
+[node name="Character_04" parent="." unique_id=1037695253 instance=ExtResource("2_hss88")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00022816658, -0.9990426, 0.02012539)
+head_target = NodePath("../Head/LookingDirection")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=906302803]
+shape = SubResource("CapsuleShape3D_81n17")
+
+[node name="Head" type="Node3D" parent="." unique_id=428188438 node_paths=PackedStringArray("flashlight")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81409645, 0)
+script = ExtResource("2_t61fv")
+flashlight = NodePath("Flashlight")
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1846251689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53722715, 0.18565953, 0.9185519)
+
+[node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=1730864397]
+light_energy = 1.5
+spot_range = 5.9418244
+
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=1220304590]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -1.5, 0)
+script = ExtResource("3_686vu")
+
+[node name="LookingDirection" type="Marker3D" parent="Head" unique_id=2071033752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4970938)
+
+[node name="Body" type="Node3D" parent="." unique_id=756424707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46195287, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Body" unique_id=845359570]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -0.8, 0)
+debug_shape_custom_color = Color(1, 1, 1, 1)
+debug_shape_thickness = 5
+
+[node name="RightHandTarget" type="Marker3D" parent="Body" unique_id=1573086381]
+transform = Transform3D(0.9989974, 0.027945459, 0.034972798, -0.028616656, 0.9994129, 0.018840848, -0.034425747, -0.019822765, 0.99921066, 0.5, 0, -0.75744265)
+
+[node name="LeftHandTarget" type="Marker3D" parent="Body" unique_id=1807711675]
+transform = Transform3D(0.99901986, -0.027234912, 0.034893062, 0.027916491, 0.9994259, -0.019197444, -0.03435019, 0.02015272, 0.99920666, -0.5, 0, -0.75744265)
+
+[editable path="Character_04"]

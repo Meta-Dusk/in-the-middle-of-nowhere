@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://doo321die43d"]
+
+[ext_resource type="Texture2D" uid="uid://cgwuqy8g2pn2d" path="res://models/structures/gas_station/textures/ice_slush_machine.png" id="1_kdhbg"]
+
+[resource]
+resource_name = "ice_slush_machine"
+cull_mode = 2
+albedo_texture = ExtResource("1_kdhbg")
+metadata/_gltf_primary_texture_coord = 0

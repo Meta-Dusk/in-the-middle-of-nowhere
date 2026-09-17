@@ -1,0 +1,149 @@
+[gd_scene format=4 uid="uid://b6xh8dco4ivax"]
+
+[ext_resource type="Script" uid="uid://bmp7igbiubskh" path="res://scenes/prefabs/anim_tweaker.gd" id="1_w7pk8"]
+[ext_resource type="Material" uid="uid://3p35flgxaxy1" path="res://models/structures/gas_station/materials/Door_01.tres" id="2_o30a3"]
+[ext_resource type="Script" uid="uid://csyre4nyapm4" path="res://scripts/interactables/openable.gd" id="3_vu2vu"]
+
+[sub_resource type="Animation" id="Animation_h1qwl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gftd5"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5707964, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rvui5"]
+resource_name = "close_alt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_culwq"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vr78d"]
+resource_name = "open_alt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s3uej"]
+_data = {
+&"RESET": SubResource("Animation_h1qwl"),
+&"close": SubResource("Animation_gftd5"),
+&"close_alt": SubResource("Animation_rvui5"),
+&"open": SubResource("Animation_culwq"),
+&"open_alt": SubResource("Animation_vr78d")
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5cots"]
+_surfaces = [{
+"aabb": AABB(-0.023522805, -1.2780559, -0.90981525, 0.04704561, 2.4891396, 0.9242199),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQABAABAAMAAgAFAAAABQADAAAAAgAEAAYAAgAGAAUABAADAAcABgAEAAcABQAHAAMABgAHAAUA"),
+"name": "Door_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAD/////AAAAAP//AAAAAAAA////////AAAAAP//AAAAAAAAAAD//wAAAAAAAAAAAAAAAP////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rkctd"]
+resource_name = "gas_station_Door_02"
+_surfaces = [{
+"aabb": AABB(-0.023522805, -1.2780559, -0.90981525, 0.04704561, 2.4891396, 0.9242199),
+"attribute_data": PackedByteArray("WARx/GD9jQNg/XH8WASNA5AOcfzjAY0D4wFx/JAOjQNg/XH8WASNA1gEcfxg/Y0D4wFx/JAOjQOQDnH84wGNA5AOBiXjAXCBkA5wgeMBBiXjAQYlkA5wgeMBcIGQDgYl"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": ExtResource("2_o30a3"),
+"name": "Door_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAP///7//////AAD/v///AAAAAP+//////////7///wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAAAA//8AAAAAAAAAAP//AID///////8AgP//AAD//wCAAAD/////AID//wAAAAD/PwAAAAD///8///8AAP///z8AAAAAAAD/PwAA//8AAP+//////////78AAP//////v/////8AAP+//38AAP9/AAD/fwAA/38AAP///3////9/////f////3//P/9//z//f/8//3//P/9//3////9/////f////3///wAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5cots")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lrdnt"]
+points = PackedVector3Array(-0.043247826, -1.2976081, -0.92955554, 0.035758935, 1.2306082, 0.01871109, -0.043247826, 1.2306082, 0.01871109, 0.035758935, -1.2976081, 0.01871109, 0.035758935, 1.2306082, -0.92955554, -0.043247826, 1.2306082, -0.92955554, -0.043247826, -1.2976081, 0.01871109, 0.035758935, -1.2976081, -0.92955554)
+
+[node name="DoorExit" type="Node3D" unique_id=1037401780]
+script = ExtResource("1_w7pk8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=364890806]
+libraries/ = SubResource("AnimationLibrary_s3uej")
+
+[node name="Hinge" type="Node3D" parent="." unique_id=427965473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.91345024)
+
+[node name="DoorMesh" type="MeshInstance3D" parent="Hinge" unique_id=1849442716]
+transform = Transform3D(1, 0, 2.2252534e-07, 0, 1, 0, -2.2252534e-07, 0, 1, 0, 0, 0.91345024)
+mesh = SubResource("ArrayMesh_rkctd")
+
+[node name="DoorBody" type="StaticBody3D" parent="Hinge/DoorMesh" unique_id=1497940242 node_paths=PackedStringArray("anim_player", "anim_tweaker")]
+script = ExtResource("3_vu2vu")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_tweaker = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/DoorMesh/DoorBody" unique_id=1265847513]
+shape = SubResource("ConvexPolygonShape3D_lrdnt")

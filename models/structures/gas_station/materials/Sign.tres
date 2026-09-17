@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://llu23c1fwg4q"]
+
+[ext_resource type="Texture2D" uid="uid://b0i6ai3qchlom" path="res://models/structures/gas_station/textures/Sign.jpg" id="1_6frdg"]
+
+[resource]
+resource_name = "Sign"
+cull_mode = 2
+albedo_texture = ExtResource("1_6frdg")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("1_6frdg")
+metadata/_gltf_primary_texture_coord = 0

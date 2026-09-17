@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcd1pub5t5vev"]
+
+[ext_resource type="Texture2D" uid="uid://clxlc3jine5bw" path="res://models/structures/gas_station/textures/Background_01.png" id="1_3a85i"]
+
+[resource]
+resource_name = "Background_01"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_3a85i")
+metadata/_gltf_primary_texture_coord = 0
