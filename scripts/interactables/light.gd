@@ -17,7 +17,7 @@ func _toggle_material() -> void:
 		push_warning("light is null!")
 		return
 		
-	var mat = off_material if !is_on else null
+	var mat = off_material if not is_on else null
 	$LampMesh.set_surface_override_material(0, mat)
 
 func _toggle_light() -> void:
@@ -25,6 +25,6 @@ func _toggle_light() -> void:
 	light.visible = is_on
 
 func toggle_light() -> void:
-	is_on = !is_on
+	is_on = not is_on
 	_toggle_material()
 	_toggle_light()

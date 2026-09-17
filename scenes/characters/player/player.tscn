@@ -8,20 +8,42 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_81n17"]
 radius = 0.35
 
-[node name="Player" type="CharacterBody3D" unique_id=838864236 node_paths=PackedStringArray("wall_ray", "r_hand_target", "l_hand_target", "r_arm_ik", "l_arm_ik", "r_hand_ik", "l_hand_ik")]
+[node name="Player" type="CharacterBody3D" unique_id=838864236 node_paths=PackedStringArray("anim_tree")]
 floor_max_angle = 0.9599311
 script = ExtResource("1_7uws0")
-wall_ray = NodePath("Body/RayCast3D")
-r_hand_target = NodePath("Body/RightHandTarget")
-l_hand_target = NodePath("Body/LeftHandTarget")
-r_arm_ik = NodePath("Character_04/Skeleton3D/RightArmIter")
-l_arm_ik = NodePath("Character_04/Skeleton3D/LeftArmIter")
-r_hand_ik = NodePath("Character_04/Skeleton3D/RightHand")
-l_hand_ik = NodePath("Character_04/Skeleton3D/LeftHand")
+anim_tree = NodePath("Character_04/AnimationTree")
 
 [node name="Character_04" parent="." unique_id=1037695253 instance=ExtResource("2_hss88")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00022816658, -0.9990426, 0.02012539)
 head_target = NodePath("../Head/LookingDirection")
+
+[node name="Skeleton3D" parent="Character_04" index="0" unique_id=1555607267]
+bones/0/position = Vector3(0.00439596, 1.0160966, 0.0152818635)
+bones/0/rotation = Quaternion(-0.002651422, 0.0131708225, -0.047155317, 0.9987973)
+bones/1/rotation = Quaternion(-0.06968199, -0.0129065085, 0.025691865, 0.9971549)
+bones/2/rotation = Quaternion(0.0056602834, -0.005817465, 0.051589217, 0.9986355)
+bones/3/rotation = Quaternion(0.018593092, -0.00049515726, 0.051497586, 0.9985)
+bones/4/rotation = Quaternion(0.009051268, -0.000186822, -0.019069407, 0.99977726)
+bones/5/rotation = Quaternion(0.012710554, 0.014325982, -0.07042989, 0.99733293)
+bones/7/rotation = Quaternion(-0.5857621, -0.5135434, 0.46879557, -0.41639724)
+bones/8/rotation = Quaternion(0.64727587, 0.07257922, 0.031350005, 0.75814486)
+bones/10/rotation = Quaternion(0.08933308, -0.24137785, -0.01088753, 0.9662494)
+bones/11/rotation = Quaternion(0.068933, 0.00014194021, -0.040933054, 0.9967812)
+bones/12/rotation = Quaternion(0.1790757, -0.0010810848, -0.024914786, 0.9835192)
+bones/13/rotation = Quaternion(0.08933676, -0.0003322453, -0.007198804, 0.9959755)
+bones/15/rotation = Quaternion(0.5371025, -0.56149834, 0.5099061, 0.36910188)
+bones/16/rotation = Quaternion(0.5359044, -0.050159656, -0.0990637, 0.836945)
+bones/17/rotation = Quaternion(-1.5409024e-07, 8.5681684e-08, -0.15416566, 0.9880451)
+bones/18/rotation = Quaternion(0.095304675, 0.10418955, 0.07002437, 0.987501)
+bones/19/rotation = Quaternion(0.06893277, -0.00014205024, 0.040933516, 0.99678123)
+bones/20/rotation = Quaternion(0.17907555, 0.0010808001, 0.024915827, 0.9835192)
+bones/21/rotation = Quaternion(0.121227086, 0.0019080718, 0.0017446952, 0.99262154)
+bones/23/rotation = Quaternion(0.11463835, 0.17331257, 0.9703476, -0.12347638)
+bones/24/rotation = Quaternion(-0.24899338, -0.0775075, 0.034979496, 0.96476495)
+bones/25/rotation = Quaternion(0.48599046, -0.064197026, -0.07826685, 0.86808205)
+bones/28/rotation = Quaternion(-0.041280754, 0.024711948, 0.99429226, -0.09522696)
+bones/29/rotation = Quaternion(-0.140983, 0.04653633, 0.025062153, 0.98860013)
+bones/30/rotation = Quaternion(0.53289586, -0.030667804, -0.0633252, 0.8432506)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=906302803]
 shape = SubResource("CapsuleShape3D_81n17")
@@ -32,13 +54,14 @@ script = ExtResource("2_t61fv")
 flashlight = NodePath("Flashlight")
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1846251689]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53722715, 0.18565953, 0.9185519)
+transform = Transform3D(1, 0, 0, 0, 0.9644268, 0.26435, 0, -0.26435, 0.9644268, 0.40118957, 0.36574066, 1.3168095)
 
 [node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=1730864397]
+visible = false
 light_energy = 1.5
 spot_range = 5.9418244
 
-[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=1220304590]
+[node name="LookingRay" type="RayCast3D" parent="Head" unique_id=1220304590]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 target_position = Vector3(0, -1.5, 0)
 script = ExtResource("3_686vu")
@@ -48,17 +71,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4970938)
 
 [node name="Body" type="Node3D" parent="." unique_id=756424707]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46195287, 0)
-
-[node name="RayCast3D" type="RayCast3D" parent="Body" unique_id=845359570]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-target_position = Vector3(0, -0.8, 0)
-debug_shape_custom_color = Color(1, 1, 1, 1)
-debug_shape_thickness = 5
-
-[node name="RightHandTarget" type="Marker3D" parent="Body" unique_id=1573086381]
-transform = Transform3D(0.9989974, 0.027945459, 0.034972798, -0.028616656, 0.9994129, 0.018840848, -0.034425747, -0.019822765, 0.99921066, 0.5, 0, -0.75744265)
-
-[node name="LeftHandTarget" type="Marker3D" parent="Body" unique_id=1807711675]
-transform = Transform3D(0.99901986, -0.027234912, 0.034893062, 0.027916491, 0.9994259, -0.019197444, -0.03435019, 0.02015272, 0.99920666, -0.5, 0, -0.75744265)
 
 [editable path="Character_04"]
